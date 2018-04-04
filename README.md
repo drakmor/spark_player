@@ -46,7 +46,7 @@ To start using Hola Player, follow these steps:
 
 ## Self hosting
 
-You can also [Download](https://github.com/hola/hola_player/raw/v1.0.145/dist/hola-player-1.0.145.zip) prebuilt package and host it on your website.
+You can also [Download](https://github.com/spark-mv/spark_player/raw/v1.0.145/dist/hola-player-1.0.145.zip) prebuilt package and host it on your website.
 You will also need to update the location of the swf files `videojs.swf` and `videojs-osmf.swf`.
 
 Important: If you are using HolaSpark or HolaCDN features you must retain the 'customer=<id>' param of the url even after moving Hola player to your servers.
@@ -100,7 +100,7 @@ Bandwidth saver works with MP4/FLV streams.
 
 If you want to build your own copy of Hola Player and receive the latest updates follow these instructions:
 
-First, [fork](http://help.github.com/fork-a-repo/) the hola/hola_player git repository. At the top of every github page, there is a Fork button. Click it, and the forking process will copy Hola Player into your own GitHub account.
+First, [fork](http://help.github.com/fork-a-repo/) the spark-mv/spark_player git repository. At the top of every github page, there is a Fork button. Click it, and the forking process will copy Hola Player into your own GitHub account.
 
 Clone your fork of the repo into your code directory
 
@@ -117,7 +117,7 @@ cd hola_player
 Assign the original repo to a remote called "upstream"
 
 ```
-git remote add upstream https://github.com/hola/hola_player.git
+git remote add upstream https://github.com/spark-mv/spark_player.git
 ```
 
 >In the future, if you want to pull in updates to Hola Player that happened after you cloned the main repo, you can run:
