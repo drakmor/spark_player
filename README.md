@@ -105,13 +105,13 @@ First, [fork](http://help.github.com/fork-a-repo/) the spark-mv/spark_player git
 Clone your fork of the repo into your code directory
 
 ```bash
-git clone https://github.com/<your-username>/hola_player.git
+git clone https://github.com/<your-username>/spark_player.git
 ```
 
 Navigate to the newly cloned directory
 
 ```bash
-cd hola_player
+cd spark_player
 ```
 
 Assign the original repo to a remote called "upstream"
