@@ -352,6 +352,21 @@ Player.prototype.init_vjs = function(){
         player.on('pause', function(e){
             if (player.scrubbing()) // XXX bahaa: do we need this?
                 e.stopImmediatePropagation();
+        }).on('fullscreenchange', function(e){
+            var orientation = window.screen && window.screen.orientation;
+            // ios doesn't support orientation api
+            if (!videojs.browser.IS_ANDROID || !orientation ||
+                !orientation.lock)
+            {
+                return;
+            }
+            if (player.isFullscreen())
+            {
+                orientation.lock(player.videoWidth()>player.videoHeight() ?
+                    'landscape' : 'portrait');
+            }
+            else
+                orientation.unlock();
         }).on('save_logs', function(e){
             // XXX bahaa: TODO
         }).on('problem_report', function(e){
