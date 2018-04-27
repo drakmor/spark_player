@@ -6,6 +6,11 @@ _(none)_
 
 ---------------------
 
+## 1.0.146 (2018-04-27)
+* videojs-ima: add setAdWillAutoPlay and setAdWillPlayMuted calls 
+* Fixed enable_autoplay_on_mobile option on IOS
+* Lock screen orientation in fullscreen mode on Android
+
 ## 1.0.145 (2018-03-29)
 * Fix ui zoom for ios skin
 
