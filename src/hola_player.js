@@ -168,7 +168,7 @@ function set_defaults(element, opt){
     if (opt.watermark && !opt.watermark.fadeTime)
         opt.watermark.fadeTime = null;
     if (opt.enable_autoplay_on_mobile && (videojs.browser.IS_ANDROID ||
-        !videojs.browser.IS_IOS))
+        videojs.browser.IS_IOS))
     {
         opt.muted = true;
         opt.volume = {override_local_storage: true};
