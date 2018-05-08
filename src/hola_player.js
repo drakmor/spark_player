@@ -348,7 +348,8 @@ Player.prototype.init_vjs = function(){
             player.thumbnails(opt.thumbnails);
         hola_player.init_ads(player);
         hola_player.init_captions(player, element);
-        hola_player.init_watermark(player, opt.controls_watermark);
+        // call init_watermark after watermark plugin was initialized
+        setTimeout(function(){ hola_player.init_watermark(player, opt); });
         player.on('pause', function(e){
             if (player.scrubbing()) // XXX bahaa: do we need this?
                 e.stopImmediatePropagation();
@@ -680,11 +681,26 @@ Player.prototype.init_captions = function(player, element){
 };
 
 Player.prototype.init_watermark = function(player, opt){
-    if (!opt)
+    var controls_opt, tooltip, img;
+    if (controls_opt = opt.controls_watermark)
+    {
+        if (typeof controls_opt=='string')
+            controls_opt = {image: controls_opt};
+        var el = player.getChild('controlBar').addChild('controlsWatermark',
+            controls_opt).el();
+        if ((tooltip = controls_opt.tooltip) &&
+            (img = el.querySelector('img')))
+        {
+            img.alt = tooltip;
+        }
+    }
+    if (!(tooltip = opt.watermark && opt.watermark.tooltip) ||
+        !(img = player.el().querySelector('.vjs-watermark-content img')))
+    {
         return;
-    if (typeof opt=='string')
-        opt = {image: opt};
-    player.getChild('controlBar').addChild('controlsWatermark', opt);
+    }
+    img.alt = tooltip;
+    img.title = tooltip;
 };
 
 function init_ads_id3(player){
