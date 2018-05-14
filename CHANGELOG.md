@@ -6,6 +6,10 @@ _(none)_
 
 ---------------------
 
+## 1.0.147 (2018-05-08)
+* Add title and alt attributes for watermark
+* Fixed showing error message after pre-roll
+
 ## 1.0.146 (2018-04-27)
 * videojs-ima: add setAdWillAutoPlay and setAdWillPlayMuted calls 
 * Fixed enable_autoplay_on_mobile option on IOS
