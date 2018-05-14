@@ -126,7 +126,6 @@ function set_defaults(element, opt){
     // disable autoplay if spark autoplay is enabled
     if (spark_conf.autoplay && spark_conf.autoplay.enable)
         opt.autoplay = false;
-    opt.autoplay_mode = opt.autoplay_mode||'auto';
     opt.base_url = opt.base_url||'//player2.h-cdn.com';
     if (opt.video_url)
     {
@@ -377,7 +376,7 @@ Player.prototype.init_vjs = function(){
         {
             util.can_autoplay(function(res){
                 E.log.info('can autoplay: '+res);
-                if (!res || opt.autoplay_mode=='sound'&&res!='sound')
+                if (!res || opt.autoplay=='sound'&&res!='sound')
                     return;
                 if (res=='muted')
                     player.muted(true);
