@@ -1,10 +1,10 @@
-# Hola Player - Enhanced HTML5 Video Player
-Hola Player is a web video player based on the popular video.js open source project world. It supports HTML5 and Flash video. It supports video playback on desktops and mobile devices. Hola Player integrates advanced features from [holaspark.com](http://www.holaspark.com)
+# Spark Player - Enhanced HTML5 Video Player
+Spark Player is a web video player based on the popular video.js open source project world. It supports HTML5 and Flash video. It supports video playback on desktops and mobile devices. Spark Player integrates advanced features from [holaspark.com](http://www.holaspark.com)
 
 ## Features
 
 - Commercial grade video player
-- Integrated Hola analytics module
+- Integrated Spark analytics module
 - Integrated bandwidth saver module
 - All the features of the original video.js
   - Custom branding (no watermark)
@@ -16,7 +16,7 @@ Hola Player is a web video player based on the popular video.js open source proj
 
 ## Quick start
 
-To start using Hola Player, follow these steps:
+To start using Spark Player, follow these steps:
 
 1. Register for an account on [holaspark.com](http://holaspark.com/cp)
 
@@ -49,7 +49,7 @@ To start using Hola Player, follow these steps:
 You can also [Download](https://github.com/spark-mv/spark_player/raw/v1.0.146/dist/hola-player-1.0.146.zip) prebuilt package and host it on your website.
 You will also need to update the location of the swf files `videojs.swf` and `videojs-osmf.swf`.
 
-Important: If you are using HolaSpark or HolaCDN features you must retain the 'customer=<id>' param of the url even after moving Hola player to your servers.
+Important: If you are using Spark or SparkCDN features you must retain the 'customer=<id>' param of the url even after moving Spark Player to your servers.
 
 ```html
 <script src="//www.example.com/path/to/hola_player/hola_player.js?customer=xxx"></script>
@@ -73,8 +73,8 @@ Also you MUST specify new swf locations explicitly. Copy our swf files to a loca
 
 ## Integrated video analytics
 
-Hola Player comes integrated with the free hola video analytics module. To open your free account and have access to the analytics dashboard, check out holaspark.
-Hola analytics module provides the following information using the free dashboard:
+Spark Player comes integrated with the free hola video analytics module. To open your free account and have access to the analytics dashboard, check out holaspark.
+Spark analytics module provides the following information using the free dashboard:
 - Start buffering times
 - Total views
 - Total minutes viewed
@@ -86,7 +86,7 @@ The use of this feature requires a free hola account. To learn more about the ho
 
 ## Integrated bandwidth saver for progressive http
 
-Hola Player comes integrated with the free hola bandwidth saver module. The bandwidth saver module uses progressive download methods to reduce buffer overhead while keeping the video loading time to a minimum and the player responsive.
+Spark Player comes integrated with the free hola bandwidth saver module. The bandwidth saver module uses progressive download methods to reduce buffer overhead while keeping the video loading time to a minimum and the player responsive.
 Bandwidth saver works with MP4/FLV streams.
 
 ## Examples
@@ -96,11 +96,11 @@ Bandwidth saver works with MP4/FLV streams.
 * [HDS](http://hola.github.io/examples/cdn/#hola_player_hds)
 * [IMA ads](http://hola.github.io/examples/cdn/#hola_player_ima)
 
-## Building your own copy of Hola Player
+## Building your own copy of Spark Player
 
-If you want to build your own copy of Hola Player and receive the latest updates follow these instructions:
+If you want to build your own copy of Spark Player and receive the latest updates follow these instructions:
 
-First, [fork](http://help.github.com/fork-a-repo/) the spark-mv/spark_player git repository. At the top of every github page, there is a Fork button. Click it, and the forking process will copy Hola Player into your own GitHub account.
+First, [fork](http://help.github.com/fork-a-repo/) the spark-mv/spark_player git repository. At the top of every github page, there is a Fork button. Click it, and the forking process will copy Spark Player into your own GitHub account.
 
 Clone your fork of the repo into your code directory
 
@@ -120,7 +120,7 @@ Assign the original repo to a remote called "upstream"
 git remote add upstream https://github.com/spark-mv/spark_player.git
 ```
 
->In the future, if you want to pull in updates to Hola Player that happened after you cloned the main repo, you can run:
+>In the future, if you want to pull in updates to Spark Player that happened after you cloned the main repo, you can run:
 >
 > ```bash
 > git checkout master
@@ -137,7 +137,7 @@ npm install
 > `npm config set color false`
 > Note that this change takes effect when a new command prompt window is opened; the current window will not be affected.
 
-Build a local copy of Hola Player
+Build a local copy of Spark Player
 
 ```bash
 grunt
@@ -145,7 +145,7 @@ grunt
 
 ## License
 
-Hola Player is licensed under the ISC License. [View the license file](LICENSE)
+Spark Player is licensed under the ISC License. [View the license file](LICENSE)
 
 Copyright 2017 Hola Networks ltd
 

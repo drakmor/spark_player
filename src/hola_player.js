@@ -235,7 +235,7 @@ function load_deps(deps){
 }
 
 function Player(element, opt, ready_cb){
-    E.log.info('init Hola Player v'+E.VERSION);
+    E.log.info('init Spark Player v'+E.VERSION);
     this.ready_cb = ready_cb;
     this.opt = opt;
     this.element = this.init_element(element);
@@ -252,7 +252,7 @@ Player.prototype.init_element = function(element){
     {
         element.autoplay = false;
         element.controls = false;
-        // with Hola player wrapper there is no autoSetup mode
+        // with Spark Player wrapper there is no autoSetup mode
         element.removeAttribute('data-setup');
         if (opt.poster)
             element.poster = opt.poster;
@@ -763,7 +763,7 @@ function load_cdn_loader(){
         return;
     if (document.querySelector('script[src*="//player.h-cdn.com/loader"]'))
     {
-        E.log.warn('Hola loader.js is included with Hola Player. '
+        E.log.warn('Spark loader.js is included with Spark Player. '
             +'There is no need to load it separately');
         return;
     }
