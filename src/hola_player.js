@@ -123,6 +123,10 @@ function set_defaults(element, opt){
     E.debug = spark_conf.debug || opt.debug ||
         url.indexOf('hola_debug_spark')!=-1;
     opt.autoplay = opt.auto_play || opt.autoplay; // allow both
+    // disable autoplay if spark autoplay is enabled
+    if (spark_conf.autoplay && spark_conf.autoplay.enable)
+        opt.autoplay = false;
+    opt.autoplay_mode = opt.autoplay_mode||'auto';
     opt.base_url = opt.base_url||'//player2.h-cdn.com';
     if (opt.video_url)
     {
@@ -167,12 +171,6 @@ function set_defaults(element, opt){
     }
     if (opt.watermark && !opt.watermark.fadeTime)
         opt.watermark.fadeTime = null;
-    if (opt.enable_autoplay_on_mobile && (videojs.browser.IS_ANDROID ||
-        videojs.browser.IS_IOS))
-    {
-        opt.muted = true;
-        opt.volume = {override_local_storage: true};
-    }
     return opt.sources && opt;
 }
 
@@ -375,11 +373,17 @@ Player.prototype.init_vjs = function(){
         }).on('cdn_graph_overlay', on_cdn_graph_overlay);
         if (cb)
             try { cb(player); } catch(e){ E.log.error(e.stack||e); }
-        if (opt.enable_autoplay_on_mobile || opt.autoplay &&
-            !videojs.browser.IS_ANDROID && !videojs.browser.IS_IOS)
+        if (opt.autoplay)
         {
-            player.play();
-            player.autoplay(true);
+            util.can_autoplay(function(res){
+                E.log.info('can autoplay: '+res);
+                if (!res || opt.autoplay_mode=='sound'&&res!='sound')
+                    return;
+                if (res=='muted')
+                    player.muted(true);
+                player.play();
+                player.autoplay(true);
+            });
         }
     }).on('error', function (){
         var player = this;
