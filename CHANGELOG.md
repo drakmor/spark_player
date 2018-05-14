@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.149 (2018-05-14)
+* The 'autoplay' option can have one of the following values: true, 'sound', false
+
 ## 1.0.148 (2018-05-14)
 * Added proper autoplay support
 * 'Spark Player' insted of 'Hola Player' in popup menu
