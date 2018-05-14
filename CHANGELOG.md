@@ -6,6 +6,10 @@ _(none)_
 
 ---------------------
 
+## 1.0.148 (2018-05-14)
+* Added proper autoplay support
+* 'Spark Player' insted of 'Hola Player' in popup menu
+
 ## 1.0.147 (2018-05-08)
 * Add title and alt attributes for watermark
 * Fixed showing error message after pre-roll
