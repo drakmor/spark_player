@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.150 (2018-05-15)
+* Change license_init url
+
 ## 1.0.149 (2018-05-14)
 * The 'autoplay' option can have one of the following values: true, 'sound', false
 
