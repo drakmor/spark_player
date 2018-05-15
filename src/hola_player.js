@@ -772,6 +772,8 @@ function load_cdn_loader(){
 }
 
 function license_init(){
+    if (Math.random()>0.1)
+        return;
     var xhr = new XMLHttpRequest();
     var script = util.current_script();
     var opt = {
@@ -786,7 +788,7 @@ function license_init(){
         .filter(function(key){ return !!opt[key]; })
         .map(function(key){ return key+'='+encodeURIComponent(opt[key]); })
         .join('&');
-    xhr.open('GET', 'https://client.h-cdn.com/hola_player/license_init?'+qs);
+    xhr.open('GET', 'https://perr.h-cdn.com/hola_player/license_init?'+qs);
     xhr.send();
 }
 
