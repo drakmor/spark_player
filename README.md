@@ -95,6 +95,7 @@ Bandwidth saver works with MP4/FLV streams.
 * [HLS](http://hola.github.io/examples/cdn/#hola_player_hls)
 * [HDS](http://hola.github.io/examples/cdn/#hola_player_hds)
 * [IMA ads](http://hola.github.io/examples/cdn/#hola_player_ima)
+* [IMA skippable ad](http://hola.github.io/examples/cdn/#hola_player_ima_skippable)
 
 ## Building your own copy of Spark Player
 
