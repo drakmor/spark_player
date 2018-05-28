@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.151 (2018-05-28)
+* Fixed mobile skin initialization bug
+
 ## 1.0.150 (2018-05-15)
 * Change license_init url
 
