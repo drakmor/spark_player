@@ -596,7 +596,12 @@ Player.prototype.init_ads = function(player){
         }
         E.log.info('init ad container');
         player.ima.initializeAdDisplayContainer();
-        if (!opt.ads.manual)
+        if (opt.ads.manual)
+        {
+            player.trigger('nopreroll');
+            player.trigger('adsready');
+        }
+        else
             player.ima.requestAds();
         if (e && e.type!='play')
             player.play();
@@ -708,8 +713,6 @@ Player.prototype.init_watermark = function(player, opt){
 
 function init_ads_id3(player){
     var cues = [], played_cues = {};
-    player.trigger('adsready');
-    player.trigger('nopreroll');
     player.on('timeupdate', function(){
         var cur = player.currentTime();
         cues.forEach(function(cue){

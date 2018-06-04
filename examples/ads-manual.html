@@ -21,7 +21,7 @@
         player.on('timeupdate', function(){
           var cur = player.currentTime();
           var chapter = Math.floor(cur/10);
-          if (!played_ad[chapter])
+          if (!played_ad[chapter] && cur>5)
           {
             player.ima.playAd(adTag);
             played_ad[chapter] = true;
