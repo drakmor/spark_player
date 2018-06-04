@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.152 (2018-06-04)
+* Fixed video start delay when using manual ads mode
+
 ## 1.0.151 (2018-05-28)
 * Fixed mobile skin initialization bug
 
