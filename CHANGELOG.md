@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.153 (2018-06-05)
+* Added ads.disableCustomPlaybackForIOS10Plus option to enable skippable ads on iOS
+
 ## 1.0.152 (2018-06-04)
 * Fixed video start delay when using manual ads mode
 
