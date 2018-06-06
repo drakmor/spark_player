@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.154 (2018-06-06)
+* Fixed fullscreen and mute buttons visibility during an ad on mobile
+
 ## 1.0.153 (2018-06-05)
 * Added ads.disableCustomPlaybackForIOS10Plus option to enable skippable ads on iOS
 
