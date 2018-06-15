@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.155 (2018-06-15)
+* Emulate fullscreen mode when it's not supported
+
 ## 1.0.154 (2018-06-06)
 * Fixed fullscreen and mute buttons visibility during an ad on mobile
 
