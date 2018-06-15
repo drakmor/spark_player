@@ -46,7 +46,7 @@ To start using Spark Player, follow these steps:
 
 ## Self hosting
 
-You can also [Download](https://github.com/spark-mv/spark_player/raw/v1.0.154/dist/hola-player-1.0.154.zip) prebuilt package and host it on your website.
+You can also [Download](https://github.com/spark-mv/spark_player/raw/v1.0.155/dist/hola-player-1.0.155.zip) prebuilt package and host it on your website.
 You will also need to update the location of the swf files `videojs.swf` and `videojs-osmf.swf`.
 
 Important: If you are using Spark or SparkCDN features you must retain the 'customer=<id>' param of the url even after moving Spark Player to your servers.
