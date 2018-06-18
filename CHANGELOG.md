@@ -6,6 +6,12 @@ _(none)_
 
 ---------------------
 
+## 1.0.156 (2018-06-18)
+_(none)_
+
+## 1.0.156 (2018-06-18)
+* Fixed unmute button behavior during ads
+
 ## 1.0.155 (2018-06-15)
 * Emulate fullscreen mode when it's not supported
 
