@@ -6,8 +6,10 @@ _(none)_
 
 ---------------------
 
-## 1.0.156 (2018-06-18)
-_(none)_
+## 1.0.157 (2018-07-11)
+* Add add ads.schedule param
+* Close right click menu on click inside menu area
+* Fix playsinline attribute after video recreating
 
 ## 1.0.156 (2018-06-18)
 * Fixed unmute button behavior during ads
