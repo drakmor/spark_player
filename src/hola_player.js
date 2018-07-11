@@ -561,6 +561,8 @@ Player.prototype.init_ads = function(player){
     }
     if (opt.ads.id3)
         opt.ads.manual = true;
+    if (opt.ads.schedule)
+        opt.ads.adsResponse = generate_vmap(opt.ads.schedule);
     if (!opt.ads.adTagUrl && !opt.ads.adsResponse && !opt.ads.manual)
         return E.log.error('missing Ad Tag');
     if (!window.google) // missing external <script> or blocked by AdBlocker
@@ -710,6 +712,46 @@ Player.prototype.init_watermark = function(player, opt){
     img.alt = tooltip;
     img.title = tooltip;
 };
+
+function format_time(t){
+    if (!isFinite(t))
+        return;
+    var hh = Math.floor(t/3600);
+    t = t%3600;
+    var mm = Math.floor(t/60);
+    var ss = t%60;
+    hh = hh<10 ? '0'+hh : hh;
+    mm = mm<10 ? '0'+mm : mm;
+    ss = ss<10 ? '0'+ss.toFixed(3) : ss.toFixed(3);
+    return hh+':'+mm+':'+ss;
+}
+
+function generate_vmap(schedule){
+    if (!Array.isArray(schedule))
+        return void E.log.error('ads.schedule param must be an array');
+    var vmap = '<?xml version="1.0" encoding="UTF-8"?>\n<vmap:VMAP '+
+        'xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">\n';
+    for (var i=0; i<schedule.length; i++)
+    {
+        var ad = schedule[i];
+        var time = ad.time=='start'||ad.time=='end' ? ad.time :
+            format_time(ad.time);
+        if (!time)
+            return void E.log.error('wrong ad time format');
+        if (!ad.tag)
+            return void E.log.error('ad tag not found');
+        var type = ad.type || 'linear,nonlinear';
+        vmap +=
+        ' <vmap:AdBreak timeOffset="'+time+'" breakType="'+type+'">\n'+
+        '  <vmap:AdSource allowMultipleAds="false" followRedirects="true">\n'+
+        '   <vmap:AdTagURI templateType="vast3">\n'+
+        '    <![CDATA['+ad.tag+']]>\n'+
+        '   </vmap:AdTagURI>\n'+
+        '  </vmap:AdSource>\n'+
+        ' </vmap:AdBreak>\n';
+    }
+    return vmap+'</vmap:VMAP>';
+}
 
 function init_ads_id3(player){
     var cues = [], played_cues = {};
