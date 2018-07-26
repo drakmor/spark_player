@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.158 (2018-07-26)
+* Fix ads offset when the content video does not start from the beginning
+
 ## 1.0.157 (2018-07-11)
 * Add add ads.schedule param
 * Close right click menu on click inside menu area
