@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.159 (2018-08-17)
+* Fixed mobile skin styles for DVR video
+
 ## 1.0.158 (2018-07-26)
 * Fix ads offset when the content video does not start from the beginning
 
