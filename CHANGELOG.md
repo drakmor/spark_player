@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.160 (2018-08-23)
+* Fixed playing ads on IE11 when the player has fluid option
+
 ## 1.0.159 (2018-08-17)
 * Fixed mobile skin styles for DVR video
 
