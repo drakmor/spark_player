@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.161 (2018-08-29)
+* Fixed control bar z-index when an ad is loading
+
 ## 1.0.160 (2018-08-23)
 * Fixed playing ads on IE11 when the player has fluid option
 
