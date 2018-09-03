@@ -126,7 +126,7 @@ function set_defaults(element, opt){
     // disable autoplay if spark autoplay is enabled
     if (spark_conf.autoplay && spark_conf.autoplay.enable)
         opt.autoplay = false;
-    opt.base_url = opt.base_url||'//player2.h-cdn.com';
+    opt.base_url = opt.base_url||'https://player2.h-cdn.com';
     if (opt.video_url)
     {
         opt.sources = [{
@@ -414,7 +414,8 @@ function on_cdn_graph_overlay(){
             player_obj: bws.player,
             video: bws.player.vjs
         };
-        var url = '//player.h-cdn.com'+hola_cdn.require.zdot('cdngraph_js');
+        var url = 'https://player.h-cdn.com'+
+            hola_cdn.require.zdot('cdngraph_js');
         hola_cdn.util.load_script(url, function(){
             window.cdn_graph.init(gopt, bws, hola_cdn); });
     } catch(err){ E.log.error(err.stack||err); }
@@ -554,7 +555,7 @@ Player.prototype.init_ads = function(player){
         return;
     if(!window.google || !window.google.ima)
     {
-        util.load_script('//imasdk.googleapis.com/js/sdkloader/ima3.js',
+        util.load_script('https://imasdk.googleapis.com/js/sdkloader/ima3.js',
             this.init_ads.bind(this, player));
         E.log.info('loading imasdk...');
         return;
@@ -812,7 +813,7 @@ function load_cdn_loader(){
         return;
     }
     E.log.info('Adding CDN loader...');
-    util.load_script('//player.h-cdn.com/loader.js?customer='+customer,
+    util.load_script('https://player.h-cdn.com/loader.js?customer='+customer,
         undefined, {async: true, crossOrigin: 'anonymous'});
 }
 
