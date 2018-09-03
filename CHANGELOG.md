@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.162 (2018-09-03)
+* Do not use protocol-relative urls
+
 ## 1.0.161 (2018-08-29)
 * Fixed control bar z-index when an ad is loading
 
