@@ -17,6 +17,7 @@ vjs.plugin('dvr', function(){
         if (!hls && !flashls || player.duration()!=Infinity || !seekable ||
             !seekable.length || (seekable.end(0)-seekable.start(0))<60)
         {
+            player.trigger('dvrReady', false);
             return;
         }
         var progressControl = player.controlBar.progressControl;
@@ -38,6 +39,7 @@ vjs.plugin('dvr', function(){
                     Math.max(data.details.targetduration*1.5, 10);
             });
         }
+        player.trigger('dvrReady', true);
     }
     player.ready(function(){
         var seekable = player.seekable();
