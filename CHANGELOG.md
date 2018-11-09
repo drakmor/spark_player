@@ -6,6 +6,9 @@ _(none)_
 
 ---------------------
 
+## 1.0.163 (2018-11-09)
+* Fix ads scheduling for DVR live stream
+
 ## 1.0.162 (2018-09-03)
 * Do not use protocol-relative urls
 
