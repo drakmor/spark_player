@@ -50198,7 +50198,7 @@ var _ = {
 };
 
 var E = window.hola_player = module.exports = hola_player;
-E.VERSION = '1.0.163';
+E.VERSION = '1.0.164';
 E.players = {};
 var hola_conf, customer;
 try {
@@ -59188,7 +59188,7 @@ var Hls = function () {
     key: 'version',
     get: function get() {
       // replaced with browserify-versionify transform
-      return '1.0.163';
+      return '1.0.164';
     }
   }, {
     key: 'Events',
@@ -63596,7 +63596,7 @@ var E = module.exports;
 var hlsjsConfig;
 var attached = false, disabled = false;
 
-E.VERSION = '1.0.163';
+E.VERSION = '1.0.164';
 E.name = 'HolaProviderHLS';
 
 E.attach = function(obsolete_param, videojs, Hls, hlsjsConfig_){

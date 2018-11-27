@@ -6,11 +6,11 @@ _(none)_
 
 ---------------------
 
-## 1.0.163 (2018-11-27)
-_(none)_
-
-## 1.0.163 (2018-11-27)
+## 1.0.164 (2018-11-27)
 * Fixed initial live video position on slow network connection
+
+## 1.0.163 (2018-11-09)
+* Add DVR with ads example
 
 ## 1.0.162 (2018-09-03)
 * Do not use protocol-relative urls
