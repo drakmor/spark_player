@@ -6,6 +6,12 @@ _(none)_
 
 ---------------------
 
+## 1.0.165 (2018-12-07)
+_(none)_
+
+## 1.0.165 (2018-12-07)
+* Fixed paused button on live video after pre-roll
+
 ## 1.0.164 (2018-11-27)
 * Fixed initial live video position on slow network connection
 
